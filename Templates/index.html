@@ -1,0 +1,61 @@
+{% extends 'layout.html' %}
+
+
+{% block body %}
+
+<main role="main">
+
+  <div id="myCarousel" class="carousel slide" data-ride="carousel" style="padding-top: 9%" >
+    <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+
+
+    <div class="carousel-inner"  data-interval="3000">
+      <div class="carousel-item active"  data-interval="3000">
+        <svg class="bd-placeholder-img" width="50%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"></svg>
+        <div id="slides"  data-interval="3000">
+          <div class="carousel-caption text-left" >
+           <img src="https://images.unsplash.com/photo-1520970014086-2208d157c9e2?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80" alt="no image"  width="100%" height="100%">
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-item"  data-interval="3000">
+        <svg class="bd-placeholder-img" width="50%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"></svg>
+        <div class="container">
+          <div class="carousel-caption"  data-interval="3000">
+           <img src="http://images2.fanpop.com/image/photos/13200000/Writing-writing-contests-13228745-1280-1024.jpg" alt="no image" width="100%" height="100%" >
+          </div>
+        </div>
+      </div>
+      <div class="carousel-item"  data-interval="3000">
+          <svg class="bd-placeholder-img" width="50%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"></svg>
+          <div class="container">
+            <div class="carousel-caption"  data-interval="3000">
+             <img src="https://www.wabisabilearning.com/hubfs/2019-WSB/Blog/quotes-bubbles-1.jpg" alt="no image" width="100%" height="100%" >
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item"  data-interval="3000">
+            <svg class="bd-placeholder-img" width="50%" height="100%" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice" focusable="false" role="img"></svg>
+            <div class="container">
+              <div class="carousel-caption">
+               <img src="http://images2.fanpop.com/image/photos/13200000/Writing-writing-contests-13228741-450-300.jpg" alt="no image" width="100%" height="100%" >
+              </div>
+            </div>
+          </div>
+
+    </div>
+    <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
+  {% endblock %}

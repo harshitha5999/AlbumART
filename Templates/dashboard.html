@@ -1,0 +1,174 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="col" style="padding: 5%">
+          <span>
+        <div class="sticky">
+            
+
+          <h3> welcome {{user.username}}</h3>
+          </div>
+        </span>
+          
+
+  
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="//cdn.ckeditor.com/4.11.4/standard/ckeditor.js"></script>
+    
+    <script type="text/javascript">
+      CKEDITOR.replace('editor')
+    </script>
+    
+    <div class="container">
+        <h3>Your Articles</h3>
+        <br>
+        <form action='/addarticle/' method="get">
+            
+        
+          <button  type="submit"class="btn btn-success"> <i class="fa fa-pen"></i> WriteArticle
+          </button>
+            
+        </form>
+      <table class="table">
+
+          <thead>
+            <tr>
+              <h4>
+              <th scope="col">Article</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </h4>
+            </tr>
+          </thead>
+          <tbody>
+            {% for x in articles %}
+          <tr>
+                  
+              
+              <td><h5><a href="/article/{{x.id}}" style="color:darkblue; text-decoration: none" >{{x.title}}</a></h5></td>
+             
+    
+                      <td>
+                          <form action="/editarticle/{{x.id}} "  method="get">
+                            
+                            <button style='font-size:15px' type="submit" class="btn btn-primary">  <i class='far fa-edit'>  </i>  Edit</button>
+
+                          </form>
+                          </td>
+                        <td>
+                          <form action="/deletearticle/{{x.id}}/">
+                            <button  type="submit"class="btn btn-danger"> <i class="fa fa-trash"></i>  Delete
+                            </button>
+            
+                          </form>
+                        </td>
+            
+          </tr>
+          {% endfor %}
+  
+      </tbody>
+      </table>
+      </div>
+
+      <div class="container">
+        <h3>Your Stories</h3>
+        <br>
+        <form action='/addstory/' method="get">
+            
+        
+          <button  type="submit"class="btn btn-success"> <i class="fa fa-pen"></i> WriteStory
+          </button>
+            
+        </form>
+      <table class="table">
+
+          <thead>
+            <tr>
+              <h4>
+              <th scope="col">Story</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </h4>
+            </tr>
+          </thead>
+          <tbody>
+            {% for x in stories %}
+          <tr>
+                  
+              
+              <td><h5><a href="/story/{{x.id}}" style="color:darkblue; text-decoration: none">{{x.title}}</a></h5></td>
+              
+    
+                      <td>
+                          <form action="/editstory/{{x.id}} "  method="get">
+                            
+                            <button style='font-size:15px' type="submit" class="btn btn-primary">  <i class='far fa-edit'>  </i>  Edit</button>
+
+                          </form>
+                          </td>
+                        <td>
+                          <form action="/deletestory/{{x.id}}/">
+                            <button  type="submit"class="btn btn-danger"> <i class="fa fa-trash"></i>  Delete
+                            </button>
+            
+                          </form>
+                        </td>
+            
+          </tr>
+          {% endfor %}
+  
+      </tbody>
+      </table>
+      </div>
+
+      <div class="container">
+        <h3>Your Poems</h3>
+        <br>
+        <form action='/addpoem/' method="get">
+            
+        
+          <button  type="submit"class="btn btn-success"> <i class="fa fa-pen"></i> WritePoem
+          </button>
+            
+        </form>
+      <table class="table">
+
+          <thead>
+            <tr>
+              <h4>
+              <th scope="col">Poem</th>
+              <th scope="col">Edit</th>
+              <th scope="col">Delete</th>
+            </h4>
+            </tr>
+          </thead>
+          <tbody>
+            {% for x in poems %}
+          <tr>
+                  
+              
+            <td><h5><a href="/poem/{{x.id}}" style="color:darkblue; text-decoration: none">{{x.title}}</a></h5></td>
+    
+                      <td>
+                          <form action="/editpoem/{{x.id}} "  method="get">
+                            
+                            <button style='font-size:15px' type="submit" class="btn btn-primary">  <i class='far fa-edit'>  </i>  Edit</button>
+
+                          </form>
+                          </td>
+                        <td>
+                          <form action="/deletepoem/{{x.id}}/">
+                            <button  type="submit"class="btn btn-danger"> <i class="fa fa-trash"></i>  Delete
+                            </button>
+            
+                          </form>
+                        </td>
+            
+          </tr>
+          {% endfor %}
+  
+      </tbody>
+      </table>
+      </div>
+  </body>
+{% endblock %}
+

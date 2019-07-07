@@ -1,0 +1,15 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="container" style="padding: 5%">
+      {% include 'includes/_messages.html' %}
+
+        {% for x in story %}
+        <div class="container"><h5>Title: {{x.title}}</h5></div>
+        <br>
+        <div class="container">{{x.body}}</div>
+        <br>
+
+        {% endfor %}
+
+    </div>
+   {% endblock %}

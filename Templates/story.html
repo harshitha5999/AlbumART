@@ -1,0 +1,12 @@
+{% extends 'layout.html' %}
+{% block body %}
+    <div class="container" style="padding: 5%">
+      {% include 'includes/_messages.html' %}
+
+      <div class="container"><h5>Title: {{story.title}}</h5></div>
+      <br>
+      <div class="container">{{story.body}}</div>
+      <br>              
+
+    </div>
+   {% endblock %}
